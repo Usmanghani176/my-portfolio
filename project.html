@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | Portfolio</title>
+    <!-- Theme Variables -->
+    <link rel="stylesheet" href="css/theme.css">
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- Background Styles -->
+    <link rel="stylesheet" href="css/background.css">
+    <!-- Project Detail Styles -->
+    <link rel="stylesheet" href="css/projects.css">
+    <!-- Devicon for icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;500;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Developer Loading Screen -->
+    <div class="dev-loading-screen" id="devLoadingScreen">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-controls">
+                    <span class="control close"></span>
+                    <span class="control minimize"></span>
+                    <span class="control maximize"></span>
+                </div>
+                <div class="terminal-title">bash — project_boot.sh</div>
+            </div>
+            <div class="terminal-body" id="terminalBody">
+                <div class="terminal-line"><span class="prompt">ug@usmanghanidev:~$</span> <span
+                        class="command">./load_project_assets --verbose</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="background-asset">
+        <img src="assets/hero_bg.png" alt="Background">
+    </div>
+    <div class="cursor-glow"></div>
+
+    <!-- Main Content -->
+    <main class="project-detail-main">
+        <div class="max-width-container project-detail-grid">
+            <!-- Left Side: Project Info -->
+            <div class="project-info-side">
+                <a href="index.html" class="back-link">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    <span>Back to Portfolio</span>
+                </a>
+
+                <header class="project-header">
+                    <span class="project-category" id="pCategory">Category</span>
+                    <h1 class="project-title" id="pTitle">Project Title</h1>
+                    <div class="project-meta-tags" id="pTags">
+                        <!-- Tags loaded via JS -->
+                    </div>
+                    <p class="project-short-desc" id="pDesc"></p>
+                </header>
+
+
+            </div>
+
+            <!-- Right Side: Screenshots -->
+            <div class="project-gallery-side">
+                <div class="gallery-column" id="pGallery">
+                    <!-- Images loaded via JS -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="max-width-container">
+            <p class="handle">Find me anywhere through <strong>@usmanghanidev</strong></p>
+            <p>&copy; 2026 Usman Ghani. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/project.js"></script>
+    <!-- Developer Loading Screen Control -->
+    <script>
+        (function () {
+            const devLoadingScreen = document.getElementById('devLoadingScreen');
+            const terminalBody = document.getElementById('terminalBody');
+            const hasLoaded = sessionStorage.getItem('portfolio_loaded');
+
+            if (hasLoaded) {
+                if (devLoadingScreen) devLoadingScreen.style.display = 'none';
+                document.body.classList.remove('loading-active');
+            } else {
+                document.body.classList.add('loading-active');
+
+                const lines = [
+                    { text: 'Fetching project context...', type: 'output' },
+                    { text: 'Compiling case modules...', type: 'output' },
+                    { text: 'Mounting asset storage...', type: 'output' },
+                    { text: 'Deployment complete.', type: 'success' }
+                ];
+
+                let lineIndex = 0;
+                function addLine() {
+                    if (lineIndex < lines.length) {
+                        const line = lines[lineIndex];
+                        const div = document.createElement('div');
+                        div.className = `terminal-line ${line.type}`;
+                        div.innerHTML = line.text;
+                        terminalBody.appendChild(div);
+                        lineIndex++;
+                        setTimeout(addLine, Math.random() * 200 + 100);
+                    } else {
+                        setTimeout(() => {
+                            devLoadingScreen.classList.add('fade-out');
+                            setTimeout(() => {
+                                devLoadingScreen.style.display = 'none';
+                                document.body.classList.remove('loading-active');
+                                sessionStorage.setItem('portfolio_loaded', 'true');
+                            }, 600);
+                        }, 600);
+                    }
+                }
+
+                window.addEventListener('load', function () {
+                    setTimeout(addLine, 500);
+                });
+            }
+        })();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Center - SelfLock</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --midnight-blue: #0F172A;
+            --slate-800: #1E293B;
+            --text-secondary: #64748B;
+            --bright-teal: #0D9488;
+            --accent-cyan: #22D3EE;
+            --bg-color: #F8FAFC;
+            --glass: rgba(255, 255, 255, 0.9);
+            --glass-border: rgba(255, 255, 255, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+            color: var(--midnight-blue);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Ambient Background Elements */
+        .ambient-blob {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--accent-cyan) 0%, transparent 70%);
+            filter: blur(80px);
+            opacity: 0.15;
+            z-index: -1;
+            animation: move 20s infinite alternate;
+        }
+
+        .blob-1 {
+            top: -100px;
+            right: -100px;
+        }
+
+        .blob-2 {
+            bottom: -100px;
+            left: -100px;
+            background: radial-gradient(circle, var(--bright-teal) 0%, transparent 70%);
+        }
+
+        @keyframes move {
+            from {
+                transform: translate(0, 0);
+            }
+
+            to {
+                transform: translate(50px, 50px);
+            }
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 40px;
+            padding: 60px;
+            box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .logo-box {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 30px;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.1);
+            position: relative;
+        }
+
+        .logo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 16px;
+            letter-spacing: -0.03em;
+            background: linear-gradient(135deg, var(--midnight-blue), var(--bright-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .lead {
+            font-size: 18px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Support Grid */
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-bottom: 50px;
+        }
+
+        .support-type {
+            background: white;
+            padding: 32px;
+            border-radius: 28px;
+            border: 1px solid #F1F5F9;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .support-type:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px -5px rgba(15, 23, 42, 0.08);
+            border-color: var(--bright-teal);
+        }
+
+        .type-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(13, 148, 136, 0.08);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--bright-teal);
+        }
+
+        .support-type h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .support-type p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Contact Section */
+        .contact-hub {
+            background: linear-gradient(135deg, var(--midnight-blue), var(--slate-800));
+            border-radius: 32px;
+            padding: 40px;
+            color: white;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-hub::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: var(--accent-cyan);
+            filter: blur(80px);
+            opacity: 0.1;
+        }
+
+        .contact-hub h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .contact-hub p {
+            font-size: 15px;
+            color: #94A3B8;
+            margin-bottom: 30px;
+        }
+
+        .email-card {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 16px 32px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .email-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: scale(1.02);
+        }
+
+        .email-card .label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-cyan);
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .email-card .value {
+            font-size: 22px;
+            font-weight: 700;
+            color: white;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-top: 60px;
+        }
+
+        .faq-section h2 {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .faq-item {
+            margin-bottom: 16px;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: white;
+            border: 1px solid #F1F5F9;
+            padding: 24px;
+            border-radius: 20px;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            border-color: var(--bright-teal);
+        }
+
+        .faq-question h4 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .faq-answer {
+            padding: 0 24px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-out;
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 20px 24px;
+        }
+
+        .faq-item.active .faq-question {
+            background: #F8FAFC;
+            border-radius: 20px 20px 0 0;
+            border-bottom: none;
+        }
+
+        .faq-item.active .faq-answer {
+            background: #F8FAFC;
+            border-radius: 0 0 20px 20px;
+            border: 1px solid #F1F5F9;
+            border-top: none;
+        }
+
+        .plus-icon {
+            font-size: 24px;
+            color: var(--text-secondary);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .plus-icon {
+            transform: rotate(45deg);
+            color: var(--bright-teal);
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 14px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .response-time {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(13, 148, 136, 0.1);
+            color: var(--bright-teal);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .glass-card {
+                padding: 40px 24px;
+                border-radius: 32px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .support-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .email-card .value {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ambient-blob blob-1"></div>
+    <div class="ambient-blob blob-2"></div>
+
+    <div class="container">
+        <div class="glass-card">
+            <header>
+                <div class="logo-box">
+                    <img src="assets/logo.png" alt="SelfLock Logo">
+                </div>
+                <h1>Help Center</h1>
+                <p class="lead">We're here to ensure your journey with SelfLock is seamless. Our specialized team is
+                    ready to assist you with any aspect of the platform.</p>
+
+                <div class="response-time">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    Average Response Time: < 24 Hours </div>
+            </header>
+
+            <div class="support-grid">
+                <div class="support-type">
+                    <div class="type-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>Technical Support</h3>
+                    <p>Encountering bugs, app crashes, or performance issues? Our engineers are on standby to
+                        investigate and fix any glitches.</p>
+                </div>
+
+                <div class="support-type">
+                    <div class="type-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                    </div>
+                    <h3>Usage Guidance</h3>
+                    <p>Need help setting up challenges or understanding your "Stability Score"? We'll guide you through
+                        making the most of SelfLock's features.</p>
+                </div>
+
+                <div class="support-type">
+                    <div class="type-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <h3>Data & Privacy</h3>
+                    <p>Inquiries regarding your offline-first data, how to perform a factory reset, or managing your
+                        "Recovery Key" access.</p>
+                </div>
+            </div>
+
+            <div class="contact-hub">
+                <h2>Direct Assistance</h2>
+                <p>Couldn't find what you need in the app? Message us directly.</p>
+                <a href="mailto:support@selflock.app" class="email-card">
+                    <span class="label">Official Support Channel</span>
+                    <span class="value">support@selflock.app</span>
+                </a>
+            </div>
+
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Is my data synchronized to any server?</h4>
+                        <span class="plus-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        SelfLock uses an "offline-first" approach. All your progress, goals, and logs are stored
+                        exclusively on your device. We do not maintain central servers for user habit data, ensuring
+                        maximum privacy.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What happens if I lose my device?</h4>
+                        <span class="plus-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Since data is stored locally, it cannot be recovered from a new device unless you have a
+                        high-level system backup (like iCloud or Google Drive) that includes app data.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How can I reset all my progress?</h4>
+                        <span class="plus-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        You can perform a "Factory Reset" within the App Settings. Please note that this action is
+                        irreversible and will permanently delete all your habit logs and profile data.
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <span class="footer-logo">SelfLock Systems</span>
+                <p style="font-size: 13px; color: var(--text-secondary);">&copy; 2026 SelfLock. Part of the Digital
+                    Wellness Initiative.</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // FAQ Accordion Logic
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+
+                // Close other items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem) item.classList.remove('active');
+                });
+
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

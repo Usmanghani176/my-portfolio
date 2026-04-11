@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usman Ghani | Portfolio</title>
+    <meta name="description"
+        content="Portfolio of a high-end Mobile Application Engineer specializing in Flutter, Swift, and modern mobile architectures.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="assets/UsmanProfile.jpg">
+    <link rel="shortcut icon" type="image/jpeg" href="assets/UsmanProfile.jpg">
+    <link rel="apple-touch-icon" href="assets/UsmanProfile.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <!-- Theme Variables -->
+    <link rel="stylesheet" href="css/theme.css">
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/projects.css">
+
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/benefits.css">
+    <link rel="stylesheet" href="css/testimonials.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/pricing.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/whatsapp.css">
+    <!-- Animations -->
+    <link rel="stylesheet" href="css/animations.css">
+    <!-- Mobile Responsive -->
+    <link rel="stylesheet" href="css/mobile.css">
+
+    <!-- Flash Prevention: Check loading state before rendering -->
+    <script>
+        (function () {
+            if (sessionStorage.getItem('portfolio_loaded')) {
+                document.documentElement.classList.add('skip-loading');
+            }
+        })();
+    </script>
+    <style>
+        .skip-loading .dev-loading-screen {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Developer Loading Screen -->
+    <div class="dev-loading-screen" id="devLoadingScreen">
+        <div class="reactor-loader">
+            <div class="reactor-ring"></div>
+            <div class="reactor-ring"></div>
+            <div class="reactor-ring"></div>
+            <div class="reactor-core"></div>
+        </div>
+
+        <div class="dev-loading-text">
+            <span>System Initializing</span>
+            <span class="loading-dots"></span>
+        </div>
+    </div>
+
+    <div class="background-asset">
+        <img src="assets/hero_bg.png" alt="Background">
+    </div>
+    <div class="cursor-glow"></div>
+
+    <nav class="sticky-nav">
+        <div class="nav-overlay" id="navOverlay"></div>
+        <div class="nav-content">
+            <div class="logo-container">
+                <img src="assets/UsmanProfile.jpg" alt="Profile" class="nav-profile-img">
+                <span class="logo">MobileCraft</span>
+            </div>
+            <button class="burger-menu" id="burgerMenu" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#projects">Projects</a></li>
+
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                        <!-- Sun Icon Default -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5,5-2.24,5-5S14.76,7,12,7Zm0,8c-1.65,0-3-1.35-3-3s1.35-3,3-3,3,1.35,3,3S13.65,15,12,15Zm0-12a1,1,0,0,0,1-1V1a1,1,0,0,0-2,0V2A1,1,0,0,0,12,3Zm0,18a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V22A1,1,0,0,0,12,21Zm9-9a1,1,0,0,0-1-1H19a1,1,0,0,0,0,2h1A1,1,0,0,0,21,12ZM4,12a1,1,0,0,0-1-1H2a1,1,0,0,0,0,2H3A1,1,0,0,0,4,12Zm13.95-6.05a1,1,0,0,0-1.41,0l-.71.71a1,1,0,0,0,1.41,1.41l.71-.71A1,1,0,0,0,17.95,5.95ZM5.34,17.34a1,1,0,0,0-1.41,1.41l.71.71a1,1,0,0,0,1.41-1.41ZM17.95,18.05a1,1,0,0,0,0,1.41l.71.71a1,1,0,0,0,1.41-1.41l-.71-.71A1,1,0,0,0,17.95,18.05ZM6.05,5.95a1,1,0,0,0-1.41,0l-.71.71a1,1,0,0,0,1.41,1.41l.71-.71A1,1,0,0,0,6.05,5.95Z" />
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <header class="hero" id="home">
+            <div class="hero-content">
+                <img src="assets/UsmanProfile.jpg" alt="Usman Ghani" class="profile-img">
+
+                <h1 class="fade-in">Crafting Seamless <br><span class="gradient-text">Mobile Experiences</span></h1>
+                <p class="subtitle fade-in-delay">Mobile Application Engineer | 2+ Years Experience | Specializing in
+                    Flutter & Native ecosystems. Developed and deployed numerous high-performance apps.</p>
+                <div class="cta-group fade-in-delay">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+        </header>
+
+
+
+        <!-- Projects Section -->
+        <section class="section" id="projects">
+            <h2 class="section-title">Featured Work</h2>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Dynamically populated by JS -->
+            </div>
+            <div class="show-more-container">
+                <button id="showMoreProjects" class="btn btn-secondary">View All Projects</button>
+            </div>
+        </section>
+
+
+
+        <!-- Skills Section -->
+        <section class="section" id="skills">
+            <!-- Orbiting Skills Background -->
+            <div class="skills-orbit-container">
+                <!-- Dynamically populated by JS -->
+            </div>
+
+            <!-- Content -->
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="skills-grid">
+                <!-- Dynamically populated by JS -->
+            </div>
+        </section>
+
+        <!-- Why Your Business Needs an App Section -->
+        <section class="section" id="why-app">
+            <h2 class="section-title">Why Your Business Needs an App</h2>
+            <p class="section-subtitle">Transform your business with the power of mobile technology</p>
+
+            <div class="benefits-grid">
+                <!-- Dynamically populated by JS -->
+            </div>
+
+            <div class="cta-container">
+                <a href="#contact" class="btn btn-primary">Start Your App Journey</a>
+            </div>
+        </section>
+
+
+
+        <!-- Pricing Section -->
+        <section class="section" id="pricing">
+            <h2 class="section-title">App Development Services</h2>
+            <div class="pricing-grid">
+                <!-- Dynamically populated by JS -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact" id="contact">
+            <h2 class="section-title">Let's Start a Conversation</h2>
+            <div class="contact-container">
+                <div class="glass contact-form-card">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span>Send Message</span>
+                            <div class="btn-loader"></div>
+                        </button>
+                    </form>
+                    <div id="formStatus" class="form-status"></div>
+                </div>
+
+                <div class="glass contact-info-card">
+                    <h3>Get in Touch</h3>
+                    <p>Prefer other channels? Reach out directly.</p>
+                    <div class="social-links vertical">
+                        <a href="#" class="social-btn" id="linkedinBtn">LinkedIn</a>
+                        <a href="mailto:usmanghani2176@gmail.com" class="social-btn mail" id="emailBtn">Email Me</a>
+                        <a href="#" class="social-btn" id="githubBtn">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section class="section" id="location" style="padding-top: 0;">
+            <div class="glass map-container">
+                <h3 style="text-align: center; margin-bottom: 2rem; color: var(--text-main);">Based in Lahore, Pakistan
+                </h3>
+                <div class="map-frame">
+                    <iframe src="https://maps.google.com/maps?q=31.461639,74.309685&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        width="100%" height="400" style="border:0; border-radius: 12px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    <!-- WhatsApp Float -->
+    <a href="#" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="#FFF" width="32" height="32">
+            <path
+                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+        </svg>
+    </a>
+
+    <!-- Case Study Modal -->
+    <div id="projectModal" class="modal-overlay">
+        <div class="modal-content glass">
+            <button class="modal-close" aria-label="Close Modal">&times;</button>
+            <div class="modal-body">
+                <div class="modal-header">
+                    <span class="modal-category" id="modalCategory">Category</span>
+                    <h2 id="modalTitle">Project Title</h2>
+                    <div class="tags" id="modalTags">
+                        <!-- Tags injected here -->
+                    </div>
+                </div>
+
+                <div class="modal-scroll-content">
+                    <!-- Gallery Section -->
+                    <div id="modalGallery" class="modal-gallery-grid">
+                        <!-- Images injected here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="max-width-container">
+            <p>&copy; 2026 Usman Ghani. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/theme.js"></script>
+
+    <!-- Developer Loading Screen Control -->
+    <script>
+        (function () {
+            const devLoadingScreen = document.getElementById('devLoadingScreen');
+            const isLoaded = sessionStorage.getItem('portfolio_loaded');
+
+            if (isLoaded) {
+                if (devLoadingScreen) devLoadingScreen.style.display = 'none';
+                document.body.classList.remove('loading-active');
+            } else {
+                document.body.classList.add('loading-active');
+                window.addEventListener('load', function () {
+                    setTimeout(() => {
+                        if (devLoadingScreen) {
+                            devLoadingScreen.classList.add('fade-out');
+                            setTimeout(() => {
+                                devLoadingScreen.style.display = 'none';
+                                document.body.classList.remove('loading-active');
+                                sessionStorage.setItem('portfolio_loaded', 'true');
+                            }, 600);
+                        }
+                    }, 1000);
+                });
+            }
+
+            // Fix for Safari/iOS and browser back button (bfcache)
+            window.addEventListener('pageshow', (event) => {
+                if (event.persisted || sessionStorage.getItem('portfolio_loaded')) {
+                    if (devLoadingScreen) devLoadingScreen.style.display = 'none';
+                    document.body.classList.remove('loading-active');
+                    document.documentElement.classList.add('skip-loading');
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>

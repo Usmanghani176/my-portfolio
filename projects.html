@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Projects | Usman Ghani</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="assets/myProfile.webp">
+    <link rel="shortcut icon" type="image/webp" href="assets/myProfile.webp">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Devicon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Theme Variables -->
+    <link rel="stylesheet" href="css/theme.css">
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+
+<body>
+    <div class="background-asset">
+        <img src="assets/hero_bg.png" alt="Background">
+    </div>
+    <div class="cursor-glow"></div>
+
+    <nav class="sticky-nav">
+        <div class="nav-content">
+            <div class="logo-container">
+                <img src="assets/myProfile.webp" alt="Profile" class="nav-profile-img">
+                <span class="logo">MobileCraft</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container" style="padding-top: 120px;">
+        <section class="section">
+            <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+                <h1 class="section-title">All Showcase <span class="gradient-text">Projects</span></h1>
+                <p class="subtitle" style="max-width: 600px; margin: 1rem auto; opacity: 0.8;">
+                    A comprehensive collection of my mobile engineering work, featuring Flutter and Native solutions.
+                </p>
+            </div>
+
+            <div class="projects-grid" id="allProjectsGrid">
+                <!-- Dynamically populated by projects.js -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="max-width-container">
+            <p>&copy; 2026 Usman Ghani. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/projects-list.js"></script>
+</body>
+
+</html>

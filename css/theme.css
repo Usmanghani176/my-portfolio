@@ -1,0 +1,79 @@
+:root {
+    /* Dark Mode (Cyberpunk/Neon Default) */
+    --primary-bg: #050a14;
+    --card-bg: rgba(20, 30, 50, 0.4);
+    --card-border: rgba(0, 243, 255, 0.2);
+    --text-main: #e0f2fe;
+    --text-muted: #94a3b8;
+
+    /* Neon Accents */
+    --accent-color: #00f3ff;
+    /* Neon Cyan */
+    --accent-secondary: #bc13fe;
+    /* Neon Purple */
+    --accent-glow: rgba(0, 243, 255, 0.4);
+    --accent-glow-secondary: rgba(188, 19, 254, 0.4);
+
+    --nav-bg: rgba(5, 10, 20, 0.85);
+
+    --btn-secondary-bg: rgba(0, 243, 255, 0.05);
+    --btn-secondary-hover: rgba(0, 243, 255, 0.15);
+
+    --project-placeholder-bg: linear-gradient(135deg, #0f172a, #1e1b4b);
+    --mockup-bg: #020617;
+    --mockup-border: #334155;
+
+    --badge-bg: rgba(0, 243, 255, 0.1);
+    --glass-bg: rgba(20, 30, 50, 0.4);
+
+    /* Dynamic Gradients */
+    --gradient-primary: linear-gradient(to right, #00f3ff 0%, #bc13fe 100%);
+    --gradient-glow: radial-gradient(circle at center, rgba(0, 243, 255, 0.15) 0%, transparent 70%);
+
+    --cursor-gradient: radial-gradient(circle, rgba(0, 243, 255, 0.15), rgba(188, 19, 254, 0.15), transparent 70%);
+    --particle-color: #00f3ff;
+    --cursor-blend-mode: screen;
+
+    --orbit-inner: rgba(188, 19, 254, 0.2);
+    --orbit-middle: rgba(0, 243, 255, 0.15);
+    --orbit-outer: rgba(255, 255, 255, 0.1);
+    --btn-text-on-accent: #000;
+}
+
+[data-theme="light"] {
+    /* "Day Mode" - Vibrant gradient background */
+    --primary-bg: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --card-border: rgba(59, 130, 246, 0.3);
+    --text-main: #0f172a;
+    --text-muted: #475569;
+
+    --accent-color: #2563eb;
+    --accent-secondary: #7c3aed;
+    --accent-glow: rgba(37, 99, 235, 0.3);
+    --accent-glow-secondary: rgba(124, 58, 237, 0.3);
+
+    --nav-bg: rgba(255, 255, 255, 0.95);
+
+    --btn-secondary-bg: rgba(0, 0, 0, 0.05);
+    --btn-secondary-hover: rgba(0, 0, 0, 0.1);
+
+    --project-placeholder-bg: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+    --mockup-bg: #f8fafc;
+    --mockup-border: #94a3b8;
+
+    --badge-bg: rgba(37, 99, 235, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.85);
+
+    --gradient-primary: linear-gradient(to right, #2563eb 0%, #7c3aed 100%);
+    --gradient-glow: radial-gradient(circle at center, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
+
+    --cursor-gradient: radial-gradient(circle, rgba(37, 99, 235, 0.15), rgba(124, 58, 237, 0.15), transparent 70%);
+    --particle-color: #2563eb;
+    --cursor-blend-mode: normal;
+
+    --orbit-inner: rgba(124, 58, 237, 0.4);
+    --orbit-middle: rgba(37, 99, 235, 0.3);
+    --orbit-outer: rgba(0, 0, 0, 0.15);
+    --btn-text-on-accent: #fff;
+}

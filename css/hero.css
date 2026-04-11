@@ -1,0 +1,84 @@
+/* Hero Section Styles */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: var(--gradient-glow);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.badge {
+    background: var(--badge-bg);
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 0.5rem 1.2rem;
+    border-radius: 99px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    display: inline-block;
+    box-shadow: 0 0 15px var(--badge-bg);
+    letter-spacing: 0.5px;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+.gradient-text {
+    background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 20px rgba(188, 19, 254, 0.4));
+}
+
+.hero .subtitle {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    line-height: 1.8;
+}
+
+/* Profile Image Style */
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    border: 3px solid var(--accent-color);
+    box-shadow: 0 0 30px var(--accent-glow), inset 0 0 20px var(--accent-glow);
+    animation: floatProfile 6s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05) rotate(2deg);
+    border-color: var(--accent-secondary);
+    box-shadow: 0 0 40px var(--accent-glow-secondary);
+}
+

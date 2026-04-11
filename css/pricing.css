@@ -1,0 +1,98 @@
+/* Pricing Section Styles */
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.pricing-card {
+    padding: 2rem;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    border: 1px solid var(--card-border);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+}
+
+.pricing-card.popular {
+    border: 1px solid var(--accent-color);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(0, 243, 255, 0.05) 100%);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: var(--gradient-primary);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: white;
+    box-shadow: 0 5px 15px rgba(188, 19, 254, 0.4);
+}
+
+.price-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 2rem;
+}
+
+.price-header h3 {
+    font-size: 1.5rem;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-main);
+    font-family: 'Outfit', sans-serif;
+}
+
+.price span {
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.price-header p {
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+}
+
+.price-features {
+    list-style: none;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.price-features li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    color: var(--text-muted);
+}
+
+.check-icon {
+    color: var(--accent-color);
+    margin-right: 10px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.pricing-card .btn {
+    width: 100%;
+    text-align: center;
+}
+

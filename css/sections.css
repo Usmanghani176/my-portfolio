@@ -1,0 +1,40 @@
+/* General Section Styles */
+
+.section {
+    padding: 8rem 0;
+    position: relative;
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 5px rgba(0, 243, 255, 0.3));
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin: -2rem auto 4rem auto;
+    max-width: 600px;
+}
+
+/* About Section */
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+}

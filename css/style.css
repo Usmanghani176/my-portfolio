@@ -1,0 +1,27 @@
+/* 
+ * Main Style File
+ * 
+ * This file has been reorganized into separate component files for better maintainability.
+ * 
+ * File Structure:
+ * - base.css: Reset, typography, container
+ * - theme.css: CSS variables and theme colors
+ * - loading.css: Loading screen styles
+ * - background.css: Background assets and cursor effects
+ * - navigation.css: Navigation and burger menu
+ * - sections.css: General section styles
+ * - hero.css: Hero section
+ * - buttons.css: Button styles
+ * - projects.css: Project cards and grid
+ * - skills.css: Skills section (orbiting and grid)
+ * - benefits.css: Benefits section
+ * - testimonials.css: Testimonials section
+ * - contact.css: Contact form and map
+ * - pricing.css: Pricing section
+ * - modal.css: Modal styles
+ * - whatsapp.css: WhatsApp float button
+ * - animations.css: All keyframe animations
+ * - mobile.css: Mobile responsive styles
+ * 
+ * All styles are now organized in separate files for easier maintenance and development.
+ */

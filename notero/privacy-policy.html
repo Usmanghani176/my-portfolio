@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Notero</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --midnight-blue: #0F172A;
+            --slate-800: #1E293B;
+            --text-secondary: #64748B;
+            --bright-teal: #0D9488;
+            --accent-cyan: #22D3EE;
+            --bg-color: #F8FAFC;
+            --glass: rgba(255, 255, 255, 0.9);
+            --glass-border: rgba(255, 255, 255, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+            color: var(--midnight-blue);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Ambient Background Elements */
+        .ambient-blob {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--accent-cyan) 0%, transparent 70%);
+            filter: blur(80px);
+            opacity: 0.15;
+            z-index: -1;
+            animation: move 20s infinite alternate;
+        }
+
+        .blob-1 {
+            top: -100px;
+            right: -100px;
+        }
+
+        .blob-2 {
+            bottom: -100px;
+            left: -100px;
+            background: radial-gradient(circle, var(--bright-teal) 0%, transparent 70%);
+        }
+
+        @keyframes move {
+            from {
+                transform: translate(0, 0);
+            }
+
+            to {
+                transform: translate(50px, 50px);
+            }
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 40px;
+            padding: 60px;
+            box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .logo-box {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.1);
+        }
+
+        .logo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 12px;
+            letter-spacing: -0.03em;
+            background: linear-gradient(135deg, var(--midnight-blue), var(--bright-teal));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .last-updated {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--midnight-blue);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 24px;
+            background: var(--bright-teal);
+            border-radius: 2px;
+        }
+
+        p,
+        ul {
+            color: var(--text-secondary);
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+
+        ul {
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--midnight-blue);
+            font-weight: 600;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid #E2E8F0;
+            text-align: center;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--midnight-blue);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            padding: 10px 20px;
+            border-radius: 12px;
+            background: #F1F5F9;
+        }
+
+        .back-link:hover {
+            background: var(--midnight-blue);
+            color: white;
+            transform: translateX(-5px);
+        }
+
+        @media (max-width: 768px) {
+            .glass-card {
+                padding: 40px 24px;
+                border-radius: 32px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ambient-blob blob-1"></div>
+    <div class="ambient-blob blob-2"></div>
+
+    <div class="container">
+        <div class="glass-card">
+            <header>
+                <div class="logo-box">
+                    <img src="assets/logo.png" alt="Notero Logo">
+                </div>
+                <h1>Privacy Policy</h1>
+                <p class="last-updated">Last Updated: January 30, 2026</p>
+            </header>
+
+            <section>
+                <h2>1. Introduction</h2>
+                <p>Notero ("we," "our," or "us") is dedicated to helping users organize their thoughts and capture ideas
+                    effortlessly. We prioritize your privacy above all else. This Privacy Policy explains how we handle
+                    your
+                    data within the Notero application.</p>
+            </section>
+
+            <section>
+                <h2>2. "Offline-First" Privacy</h2>
+                <p>Notero is designed as an "offline-first" application. This means that, by default, all user
+                    data—including your notes, categories, and voice recordings—is stored locally on your
+                    device. We do not maintain any central servers that store your personal note data.</p>
+            </section>
+
+            <section>
+                <h2>3. Data We Collect</h2>
+                <p>To provide our services, we may collect the following information locally on your device:</p>
+                <ul>
+                    <li><strong>Personal Information:</strong> Minimal profile info if synced with external services
+                        (optional).</li>
+                    <li><strong>Note Data:</strong> Content of your notes, categories, tags, and timestamps.
+                    </li>
+                    <li><strong>Usage Data:</strong> Application usage statistics to improve user experience.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. No Data Sharing</h2>
+                <p>We do not sell, trade, or share your personal data with third parties. Because your data remains on
+                    your device, we do not have access to it, and therefore cannot provide it to advertisers or other
+                    external entities.</p>
+            </section>
+
+            <section>
+                <h2>5. Third-Party Services</h2>
+                <p>The app may use minimal third-party integrations to enhance user experience:</p>
+                <ul>
+                    <li><strong>Google Fonts:</strong> To provide a consistent visual interface.</li>
+                    <li><strong>Local Notifications:</strong> To send reminders (requires user permission).</li>
+                </ul>
+                <p>These services do not receive your personal notes or information.</p>
+            </section>
+
+            <section>
+                <h2>6. Your Rights & Deletion</h2>
+                <p>You have full control over your data. You can delete all your information at any time using the
+                    "Factory Reset" or "Clear All Data" options in the system settings. This action is irreversible as
+                    we do not keep backups of your local data.</p>
+            </section>
+
+            <section>
+                <h2>7. Updates to This Policy</h2>
+                <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the
+                    new Privacy Policy within the app and updating the "Last Updated" date.</p>
+            </section>
+
+            <section>
+                <h2>8. Contact</h2>
+                <p>If you have questions about our privacy practices, please contact us through the official support
+                    channels provided in the app description.</p>
+            </section>
+
+            <footer>
+                <p style="font-size: 13px; color: var(--text-secondary);">&copy; 2026 Notero. All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

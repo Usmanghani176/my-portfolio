@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salah Mode - Legal & Support</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #0D9488;
+            --dark-blue: #1E3A5F;
+            --text-secondary: #64748B;
+            --accent-gold: #D4AF37;
+            --bg-color: #F8FAFC;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 48px 40px;
+            border-radius: 32px;
+            box-shadow: 0 25px 50px -12px rgba(30, 58, 95, 0.1);
+            text-align: center;
+            max-width: 440px;
+            width: 100%;
+        }
+
+        .logo-circle {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-blue));
+            border-radius: 50%;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 15px -3px rgba(13, 148, 136, 0.3);
+        }
+
+        .logo-circle svg {
+            width: 32px;
+            height: 32px;
+            color: white;
+        }
+
+        h1 {
+            color: var(--dark-blue);
+            font-size: 32px;
+            font-weight: 900;
+            margin-bottom: 8px;
+            letter-spacing: -0.05em;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 40px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn {
+            display: block;
+            background-color: var(--primary-green);
+            color: white;
+            padding: 18px;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+        }
+
+        .btn:hover {
+            background-color: #0F766E;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(13, 148, 136, 0.2);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--dark-blue);
+            border: 2px solid rgba(30, 58, 95, 0.1);
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(30, 58, 95, 0.02);
+            border-color: var(--dark-blue);
+        }
+
+        .btn-gold {
+            background-color: var(--accent-gold);
+        }
+
+        .btn-gold:hover {
+            background-color: #C19B2E;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="logo-circle">
+            <img src="assets/logo.png" alt="Salah Mode Logo"
+                style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+        </div>
+        <h1>Salah Mode</h1>
+        <div class="subtitle">Legal & Compliance Hub</div>
+
+        <div class="btn-group">
+            <a href="privacy-policy" class="btn">Privacy Policy</a>
+            <a href="terms-and-conditions" class="btn btn-outline">Terms & Conditions</a>
+            <a href="support" class="btn btn-gold">Help & Support</a>
+        </div>
+    </div>
+</body>
+
+</html>
