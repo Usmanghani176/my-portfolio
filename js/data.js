@@ -2,10 +2,10 @@ const portfolioConfig = {
   personal: {
     name: "Usman Ghani",
     headline: "Crafting Seamless <br><span class='gradient-text'>Mobile Experiences</span>",
-    subtitle: "Mobile Application Engineer | 2+ Years Experience | Specializing in Flutter  ecosystems. Developed and deployed numerous high-performance apps.",
+    subtitle: "Mobile Application Engineer | 3+ Years Experience | Specializing in Flutter  ecosystems. Developed and deployed numerous high-performance apps.",
     email: "usmanghani2176@gmail.com",
     phone: "923027541741", // WhatsApp number format (no +)
-    bio: "I am a dedicated Mobile Application Engineer with over 2 years of experience in crafting high-performance, user-centric mobile applications. My expertise lies in the Flutter and Native (Swift/Kotlin) ecosystems, where I've successfully delivered numerous projects across various industries including Education, Entertainment, and Productivity. I am passionate about clean code, intuitive UI/UX design, and staying at the forefront of mobile technology."
+    bio: "I am a dedicated Mobile Application Engineer with over 3 years of experience in crafting high-performance, user-centric mobile applications. My expertise lies in the Flutter and Native (Swift/Kotlin) ecosystems, where I've successfully delivered numerous projects across various industries including Education, Entertainment, and Productivity. I am passionate about clean code, intuitive UI/UX design, and staying at the forefront of mobile technology."
   },
   socials: {
     github: "#",
